@@ -21,6 +21,19 @@ err_msg() {
 	$rofi_error_command -e "$1"
 }
 
-# testing error messasge
-err_msg "testing the command"
+# menu items - to modify just add/remove items
+menu_items=(
+	backup="backup"
+	list="list"
+	download="download"
+	delete="delete"
+)
 
+for item in "${menu_items[@]}"; do
+	# this succesfully gets the list of variables
+	concat+="\$${item%=*}\n"
+done
+
+items="${concat%\\*}"
+
+err_msg $items
