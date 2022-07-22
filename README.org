@@ -11,6 +11,10 @@
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
 *Script*:
+- Uses logging:
+  - Gets info in the background and logs to files, allowing you to work while rofi-borg runs.
+  - Configurable number of logs to keep.
+  - Automatic pruning of logs directory.
 - Supports notifications!
   - Uses your notification command of choice. Default: [[https://dunst-project.org/][Dunst]].
 - Easily configured:
