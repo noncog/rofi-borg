@@ -30,6 +30,6 @@
 =rofi= and =borg=
 ** Installation
 ** Usage
-** Customizatoin
+** Customization
 ** Contributing
 
