@@ -25,6 +25,11 @@
     - =NOTE= rofi/theme configs can be made to be inherited, may add later.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
-
-
+** Requirements
+- =rofi=
+- =borg=
+** Installation
+** Usage
+** Customizatoin
+** Contributing
 
