@@ -15,7 +15,8 @@
   - Configured from main script. Settings are passed to subsequent scripts.
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
-  - Each script has an associated rofi config, allowing each to be customized/rethemed independently. =NOTE:= rofi/theme configs can be made to be inherited, may add later.
+  - Each script has an associated rofi config, allowing each to be customized/rethemed independently.
+    =NOTE= Rofi/theme configs can be made to be inherited, may add later.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
 
