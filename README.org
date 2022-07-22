@@ -3,9 +3,9 @@
 
 ** Features
 Borg:
-- Create backups (archives) to a repository
-- List backups (archives) in repository
-- Download a backup from repository
-- Delete a backup from repository
+- *Create* a backup (archive) in a repository
+- *List* archives in a repository
+- *Download* an archive from a repository
+- *Delete* an archive from a repository
 
 
