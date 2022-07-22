@@ -1,6 +1,7 @@
 #+HTML: <h1 align="center">rofi-borg</h1>
 #+HTML: <p align="center"><img src="demo.gif"/></p>
 #+HTML: <p align="center"> <code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to provide an easy setup, yet highly capable and customizable experience.</p>
+:star: Star rofi-borg on GitHub - It motivates me!
 ** Features
 *Borg*:
 - *Create and Prune* backups (archives) in a repository.
@@ -21,7 +22,7 @@
   - Configured from main script. Settings are passed to subsequent scripts.
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
-  - Each script has an associated rofi config, allowing each to be customized/rethemed independently.
+  - Each script has an associated rofi config, allowing each to be customized/themed independently.
     - =NOTE= rofi/theme configs can be made to be inherited, may add later.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
