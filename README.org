@@ -7,7 +7,7 @@ Borg:
 - *List* archives in a repository.
 - *Download* an archive from a repository.
 - *Delete* an archive from a repository.
-- Automatic password handling.
+- _Automatic password handling._
 - Able to use borg environment variables without setting them globally in env.
   - Protects you from having your borg information being backed up in your dotfiles.
 Script:
