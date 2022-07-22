@@ -1,6 +1,7 @@
 #+HTML: <h1 align="center">rofi-borg</h1>
 #+HTML: <p align="center"><img src="demo.gif"/></p>
-#+HTML: <p align="center"> <code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to provide an easy setup, yet highly capable and customizable experience.</p>
+#+HTML: <p align="center"><code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to be easy to setup, highly capable and customizable.</p>
+
 ** Features
 *Borg*:
 - *Create and Prune* backups (archives) in a repository.
