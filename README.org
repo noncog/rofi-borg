@@ -11,7 +11,8 @@
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
 *Script*:
-- Supports notifications! Just pass your notification command of choice. Default: dunst.
+- Supports notifications!
+  - Uses your notification command of choice. Default: [[https://dunst-project.org/][Dunst]].
 - Easily configured:
   - Configured from main script. Settings are passed to subsequent scripts.
 - Customizable:
