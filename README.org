@@ -1,7 +1,7 @@
 #+HTML: <h1 align="center">rofi-borg</h1>
 #+HTML: <p align="center"><img src="demo.gif"/></p>
 #+HTML: <p align="center"><code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to be easy to setup, highly capable, and customizable.</p>
-
+** 
 With my system, software, and configurations managed through GitHub ([[https://github.com/noncog/debian-autosetup][debian-autosetup]] and [[https://github.com/noncog/.dotfiles][.dotfiles]]), I required a method to backup and restore my private files. Thus, I created rofi-borg as a lean solution to have encrypted backups and a simple GUI to manage them.
 ** Features
 *Borg*:
