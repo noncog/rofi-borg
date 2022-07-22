@@ -3,9 +3,14 @@
 
 ** Features
 Borg:
-- *Create* a backup (archive) in a repository
-- *List* archives in a repository
-- *Download* an archive from a repository
-- *Delete* an archive from a repository
+- *Create* a backup (archive) in a repository.
+- *List* archives in a repository.
+- *Download* an archive from a repository.
+- *Delete* an archive from a repository.
+
+- Automatic password handling.
+- Configured from main script. Settings are passed to subsequent scripts.
+- Easily customizable.
+
 
 
