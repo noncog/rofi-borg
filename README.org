@@ -26,7 +26,7 @@
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
 ** Requirements
-- =rofi= and =borg=
+=rofi= and =borg=
 ** Installation
 ** Usage
 ** Customizatoin
