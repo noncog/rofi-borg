@@ -1,3 +1,11 @@
 #+TITLE: rofi-borg
 #+HTML: <p align="center"><img src="demo.gif"/></p>
 
+** Features
+Borg:
+- Create backups (archives) to a repository
+- List backups (archives) in repository
+- Download a backup from repository
+- Delete a backup from repository
+
+
