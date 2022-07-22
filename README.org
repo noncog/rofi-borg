@@ -11,10 +11,12 @@
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
 *Script*:
-- Configured from main script. Settings are passed to subsequent scripts.
-- Easily customizable.
+- Easily configured:
+  - Configured from main script. Settings are passed to subsequent scripts.
+- Customizable:
   - Each script has associated rofi config, allowing each to be customized independently.
-- Easily extendable.
+- Extendable:
+  - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
 
 
 
