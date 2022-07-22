@@ -4,7 +4,7 @@
 # user-vars # CHANGE
 #===========#
 
-prompt_message="Backup List" # rofi prompt message left of entry field
+prompt_message="List" # rofi prompt message left of entry field
 
 #=============#
 # script-vars #  DONT CHANGE
@@ -60,6 +60,6 @@ notify "Backup: Listing!"
 # get list of backups
 borg list $list_options
 # output list rofi
-list="$(cat $tempfile | $rofi_command -no-click-to-exit -p 'backups list' -dmenu)"
+list="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
 # prune log files
 prune_logs

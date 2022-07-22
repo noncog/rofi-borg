@@ -4,7 +4,7 @@
 # user-vars # CHANGE
 #===========#
 
-prompt_message="Backup Log" # rofi prompt message left of entry field
+prompt_message="Log" # rofi prompt message left of entry field
 
 #=============#
 # script-vars #  DONT CHANGE
