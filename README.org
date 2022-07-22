@@ -8,7 +8,7 @@ Borg:
 - *Download* an archive from a repository.
 - *Delete* an archive from a repository.
 - Automatic password handling.
-- Able to use borg environment variables without setting them globally in env.
+- Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
 Script:
 - Configured from main script. Settings are passed to subsequent scripts.
