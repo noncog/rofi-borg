@@ -2,7 +2,7 @@
 #+HTML: <p align="center"><img src="demo.gif"/></p>
 
 ** Features
-Borg:
+*Borg*:
 - *Create and Prune* backups (archives) in a repository.
 - *List* archives in a repository.
 - *Download* an archive from a repository.
@@ -10,7 +10,7 @@ Borg:
 - Automatic password handling.
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
-Script:
+*Script*:
 - Configured from main script. Settings are passed to subsequent scripts.
 - Easily customizable.
   - Each script has associated rofi config, allowing each to be customized independently.
