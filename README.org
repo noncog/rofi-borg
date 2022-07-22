@@ -7,8 +7,8 @@ Borg:
 - *List* archives in a repository.
 - *Download* an archive from a repository.
 - *Delete* an archive from a repository.
-
 - Automatic password handling.
+Script:
 - Configured from main script. Settings are passed to subsequent scripts.
 - Easily customizable.
 - Easily extendable.
