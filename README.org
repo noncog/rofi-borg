@@ -1,1 +1,3 @@
 #+TITLE: rofi-borg
+#+HTML: <p align="center"><img src="demo.gif"/></p>
+
