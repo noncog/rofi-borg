@@ -51,19 +51,15 @@ Before you can use the script, it must be configured and you need to setup a lau
 
 The options you can change in each script are clearly marked in the comments.
 
-- rofi-borg settings:
-All borg command options are set per sub-script, and rofi-borg ships with sane defaults.
-
-If you would like to customize the behavior of the script..
-
 **** rofi-borg
 - Contains global options set for all sub-scripts
 - Contains borg environment variables. Only set them here.
   - Minimally you must use:
-    - BORG_REPO and setup password handling if used:
-      - Either BORG_PASSPHRASE or BORG_PASSCOMMAND
+    - BORG_REPO
+    - BORG_PASSPHRASE or BORG_PASSCOMMAND - if using password/passkey (RECCOMENDED)
 
 **** sub-scripts
+All borg command options are set per sub-script, and rofi-borg ships with sane defaults.
 
 
 *** Launching:
