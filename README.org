@@ -47,7 +47,7 @@ Before you can use the script, it must be configured and you need to setup a lau
 #+HTML: <table><tr><th>:warning: WARNING</th></tr><tr><td>This script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</td><tr/></table>
 
 *** Configuration:
-=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. That is the minimal amount of configuration required. All borg command options are set per script, and rofi-borg ships with sane defaults.
+=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring rofi-borg is the minimal amount of configuration required. All borg command options are set per sub-script, and rofi-borg ships with sane defaults.
 
 If you would like to customize the behavior of the script..
 *** Launching:
