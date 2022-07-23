@@ -51,8 +51,8 @@ Before you can use the script, it must be configured and you need to setup a lau
 
 The options you can change in each script are clearly marked in the comments.
 
-**** rofi-borg.sh
-- *global options* - Applies to all subscripts.
+- *rofi-borg.sh*
+  - *global options* - Applies to all subscripts.
   - Minimally must set:
     - directory=" " to your install location.
     - downloads=" " to your desired download location.
@@ -66,12 +66,12 @@ The options you can change in each script are clearly marked in the comments.
       - If using password/passkey. (RECCOMENDED)
       - Otherwise comment it out.
 
-**** sub-scripts
-- Located in =rofi-borg/scripts/=
-- Contains all borg command options.
-  - Always located under borg-vars comment.
-  - rofi-borg ships with sane defaults.
-  - If you know the exact command options you want, set them in the corresponding script before using.
+- *sub-scripts*
+  - Located in =rofi-borg/scripts/=
+  - Contain *borg command options*.
+    - Always located under borg-vars comment.
+      - rofi-borg ships with sane defaults.
+      - If you know the exact command options you want, set them in the corresponding script before using.
 
 *** Launching:
 - *Locally*:
