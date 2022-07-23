@@ -42,7 +42,7 @@ With my system, software, and configurations managed through GitHub ([[https://g
 ** Usage
 Before you can use the script, it must be configured and you need to setup a launching method. 
 
-#+HTML: <blockquote>:warning: The script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</blockquote>
+#+HTML: <blockquote>:warning: The script is not designed to completely setup borg backup for you. You need to have an understanding of    how borg is used and have a valid repository.</blockquote>
 
 *** Configuration:
 *** Launching:
