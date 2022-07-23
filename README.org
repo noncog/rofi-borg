@@ -37,11 +37,14 @@ With my system, software, and configurations managed through GitHub ([[https://g
    - This install method allows you to version control rofi-borg into your rofi dotfiles, so it is available to reinstall your backups as soon as your dotfiles are installed.
      1. =cd $HOME/.config/rofi/=
      2. =git clone https://github.com/noncog/rofi-borg=
-     3. configure =rofi-borg.sh= and launch using preferred method. See Usage for launching methods.
+     3. configure =rofi-borg.sh= and launch using preferred method.
+        - See Usage for configuration and launching methods.
 ** Configuration
 TODO
 ** Usage
-Launching:
+Description: You must configure and setup a launching method before you can use the script.
+*** Configuration
+*** Launching:
 - *Locally*:
   - =cd= into install director
   - =./rofi-borg.sh= or =bash rofi-borg.sh=
