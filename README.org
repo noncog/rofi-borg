@@ -34,7 +34,11 @@ With my system, software, and configurations managed through GitHub ([[https://g
 ** WIP
 - TODO change rofi config to be inheritance based so user can customize the one rofi config and the one bash script and be done. Currently, may have issues running because you don't have the font I use: Fira Code...
 ** Installation
-TODO
+1. Install dependencies.
+2. =git clone https://github.com/noncog/rofi-borg=
+3. cd rofi-borg
+4. ./rofi-borg.sh or bash rofi-borg.sh
+   (optional) For easy access, add the script somewhere in your $PATH.
 ** Configuration
 TODO
 ** Usage
