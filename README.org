@@ -47,23 +47,23 @@ Before you can use the script, it must be configured and you need to setup a lau
 #+HTML: <table><tr><th>:warning: WARNING</th></tr><tr><td>This script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</td><tr/></table>
 
 *** Configuration:
-=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring rofi-borg.sh is the minimal amount of configuration required.
+=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring =rofi-borg.sh= is the minimal amount of configuration required.
 
 The options you can change in each script are clearly marked in the comments.
 
 - *rofi-borg.sh*
   - *global options* - Applies to all subscripts.
     - Minimally must set:
-      - directory=" " to your install location.
-      - downloads=" " to your desired download location.
-      - notifications="y" or "n" if you want progress notifications.
-        - If using "y", must set notifier=" " to your desired command for notifications.
-  - *borg environment variables* - Only set them here.
+      1. directory=" " to your install location.
+      2. downloads=" " to your desired download location.
+      3. notifications="y" or "n" if you want progress notifications.
+         - If using "y", must set notifier=" " to your desired command for notifications.
+  - *borg environment variables* - Only set/add them here. Not in subscripts.
     - Minimally must use:
-      - BORG_REPO
-      - BORG_PASSPHRASE or BORG_PASSCOMMAND
-        - If using password/passkey. (RECCOMENDED)
-        - Otherwise comment it out.
+      1. BORG_REPO
+      2. BORG_PASSPHRASE or BORG_PASSCOMMAND
+         - If using password/passkey. (RECCOMENDED)
+         - Otherwise comment it out.
 
 - *sub-scripts*
   - Located in =rofi-borg/scripts/=
