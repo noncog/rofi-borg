@@ -56,9 +56,15 @@ All borg command options are set per sub-script, and rofi-borg ships with sane d
 
 If you would like to customize the behavior of the script..
 
-**** Testing rofi borg subheading
-some more stuff
-- some other stuff
+**** rofi-borg
+- Contains global options set for all sub-scripts
+- Contains borg environment variables. Only set them here.
+  - Minimally you must use:
+    - BORG_REPO and setup password handling if used:
+      - Either BORG_PASSPHRASE or BORG_PASSCOMMAND
+
+**** sub-scripts
+
 
 *** Launching:
 - *Locally*:
@@ -72,7 +78,7 @@ some more stuff
 - *From your custom rofi menu*:
 - *From rofi combi-modi*:
   
-*** Launching:
+*** Launching
 **** Locally
   1. =cd= into install directory
   2. =./rofi-borg.sh= or =bash rofi-borg.sh=
@@ -80,7 +86,7 @@ some more stuff
   - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
     - If installed elsewhere supply your own file path.
   - (optional) For easy access, add the script somewhere in your $PATH.
-**** From your window manager
+**** From window managers
 **** From your custom rofi menu
 **** From rofi combi-modi
 ** Customization
