@@ -4,7 +4,7 @@
 ** Motivation
 With my system, software, and configurations managed through GitHub ([[https://github.com/noncog/debian-autosetup][debian-autosetup]] and [[https://github.com/noncog/.dotfiles][.dotfiles]]), I required a method to backup and restore my private files. Thus, I created rofi-borg as a lean solution to have encrypted backups and a simple GUI to manage them.
 ** Features
-*** Borg
+*** Borg:
 - *Create and Prune* backups (archives) in a repository.
 - *List* archives in a repository.
 - *Download* an archive from a repository.
@@ -12,7 +12,7 @@ With my system, software, and configurations managed through GitHub ([[https://g
 - Automatic password handling.
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
-*** Script
+*** Script:
 - Supports automation of backups.
   - Just call =backup_run.sh= from cron or systemd. May create template for this later.
 - Supports notifications!
@@ -39,11 +39,14 @@ With my system, software, and configurations managed through GitHub ([[https://g
      2. =git clone https://github.com/noncog/rofi-borg=
      3. configure =rofi-borg.sh= and launch using preferred method.
         - See Usage for configuration and launching methods.
-** Configuration
-TODO
 ** Usage
-Description: You must configure and setup a launching method before you can use the script.
-*** Configuration
+Before you can use the script, it must be configured and you need to setup a launching method. The script is not designed to completely setup borg backup for you, therefore you need to have an understanding of how borg is used and have a valid setup.
+
+#+begin
+**Warning**
+Testing of warning
+#+end
+*** Configuration:
 *** Launching:
 - *Locally*:
   - =cd= into install director
