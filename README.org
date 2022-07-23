@@ -54,7 +54,7 @@ The options you can change in each script are clearly marked in the comments.
 **** rofi-borg.sh
 - *global options* - Applies to all subscripts.
   - Minimally must set:
-    - ~directory" "~ to your install location.
+    - directory=" " to your install location.
     - downloads=" " to your desired download location.
     - notifications="y" or "n" if you want progress notifications.
       - If using "y", must set notifier=" " to your desired command for notifications.
@@ -67,8 +67,9 @@ The options you can change in each script are clearly marked in the comments.
       - Otherwise comment it out.
 
 **** sub-scripts
-Located in rofi-borg/scripts/
-- Contains all borg command options. rofi-borg ships with sane defaults, but can customize these for a particular borg command in it's related script.
+- Located in =rofi-borg/scripts/=
+- Contains all borg command options.
+  - rofi-borg ships with sane defaults, but can customize these for a particular borg command in it's related script.
 
 *** Launching:
 - *Locally*:
