@@ -53,14 +53,20 @@ The options you can change in each script are clearly marked in the comments.
 
 **** rofi-borg
 - Contains global options set for all sub-scripts
+  - Minimally must set:
+    - directory="" to your install location.
+    - downloads="" to your desired download location.
+    - notifications="y" or "n" if you want progress notifications.
+      - If using "y", must set notifier="" to your desired command for notifications.
+      
 - Contains borg environment variables. Only set them here.
   - Minimally you must use:
     - BORG_REPO
-    - BORG_PASSPHRASE or BORG_PASSCOMMAND - if using password/passkey (RECCOMENDED)
+    - BORG_PASSPHRASE or BORG_PASSCOMMAND
+      - If using password/passkey. (RECCOMENDED)
 
 **** sub-scripts
-All borg command options are set per sub-script, and rofi-borg ships with sane defaults.
-
+- Contains all borg command options. rofi-borg ships with sane defaults, but can customize these for a particular borg command in it's related script.
 
 *** Launching:
 - *Locally*:
