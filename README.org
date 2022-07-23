@@ -41,9 +41,17 @@ With my system, software, and configurations managed through GitHub ([[https://g
 ** Configuration
 TODO
 ** Usage
-Launch script rofi-borg.sh in some way.
-   - =./rofi-borg.sh= or =bash rofi-borg.sh=
-   - For easy access, add the script somewhere in your $PATH.
+Launching:
+- *Locally*:
+  - =cd= into install director
+  - =./rofi-borg.sh= or =bash rofi-borg.sh=
+- *Globally*:
+  - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
+    - If installed elsewhere supply your own file path.
+  - (optional) For easy access, add the script somewhere in your $PATH.
+- *From your window manager*:
+- *From your custom rofi menu*:
+- *From rofi combi-modi*:
 ** Customization
 TODO
 ** Contributing
