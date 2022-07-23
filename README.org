@@ -61,9 +61,9 @@ The options you can change in each script are clearly marked in the comments.
   - *borg environment variables* - Only set them here.
     - Minimally must use:
       - BORG_REPO
-        - BORG_PASSPHRASE or BORG_PASSCOMMAND
-          - If using password/passkey. (RECCOMENDED)
-          - Otherwise comment it out.
+      - BORG_PASSPHRASE or BORG_PASSCOMMAND
+        - If using password/passkey. (RECCOMENDED)
+        - Otherwise comment it out.
 
 - *sub-scripts*
   - Located in =rofi-borg/scripts/=
