@@ -34,13 +34,12 @@ With my system, software, and configurations managed through GitHub ([[https://g
 ** WIP
 - TODO change rofi config to be inheritance based so user can customize the one rofi config and the one bash script and be done. Currently, may have issues running because you don't have the font I use: Fira Code...
 ** Installation
-
 1. Install dependencies.
 2. *Reccomended Install*:
    - This install method allows you to version control rofi-borg into your rofi dotfiles, so it is available to reinstall your backups as soon as your dotfiles are installed.
-     1. =cd $HOME/.config/rofi/=
-     2. =git clone https://github.com/noncog/rofi-borg=
-     3. configure =rofi-borg.sh= and launch using preferred method. See usage for launching methods.
+   1. =cd $HOME/.config/rofi/=
+   2. =git clone https://github.com/noncog/rofi-borg=
+   3. configure =rofi-borg.sh= and launch using preferred method. See usage for launching methods.
 ** Configuration
 TODO
 ** Usage
