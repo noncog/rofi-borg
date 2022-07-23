@@ -58,8 +58,7 @@ The options you can change in each script are clearly marked in the comments.
     - downloads=" " to your desired download location.
     - notifications="y" or "n" if you want progress notifications.
       - If using "y", must set notifier=" " to your desired command for notifications.
-      
-- *borg environment variables* - Only set them here.
+  - *borg environment variables* - Only set them here.
   - Minimally must use:
     - BORG_REPO
     - BORG_PASSPHRASE or BORG_PASSCOMMAND
