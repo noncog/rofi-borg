@@ -69,7 +69,9 @@ The options you can change in each script are clearly marked in the comments.
 **** sub-scripts
 - Located in =rofi-borg/scripts/=
 - Contains all borg command options.
-  - rofi-borg ships with sane defaults, but can customize these for a particular borg command in it's related script.
+  - Always located under borg-vars comment.
+  - rofi-borg ships with sane defaults.
+  - If you know the exact command options you want, set them in the corresponding script before using.
 
 *** Launching:
 - *Locally*:
@@ -95,6 +97,8 @@ The options you can change in each script are clearly marked in the comments.
 **** From your custom rofi menu
 **** From rofi combi-modi
 ** Customization
+Every script that creates a rofi window contains it's own prompt message string and can be configured per script.
+
 TODO
 ** Contributing
 TODO
