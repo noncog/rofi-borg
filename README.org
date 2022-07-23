@@ -40,13 +40,10 @@ With my system, software, and configurations managed through GitHub ([[https://g
      3. configure =rofi-borg.sh= and launch using preferred method.
         - See Usage for configuration and launching methods.
 ** Usage
-Before you can use the script, it must be configured and you need to setup a launching method. The script is not designed to completely setup borg backup for you, therefore you need to have an understanding of how borg is used and have a valid setup.
+Before you can use the script, it must be configured and you need to setup a launching method. 
 
-#+HTML: <p align="center"> :warning: test warning</p>
-#+begin_quote
-**Warning**
-Testing of warning
-#+end_quote
+#+HTML: <p align="center">:warning: The script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</p>
+
 *** Configuration:
 *** Launching:
 - *Locally*:
