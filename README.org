@@ -40,7 +40,6 @@ With my system, software, and configurations managed through GitHub ([[https://g
      1. =cd $HOME/.config/rofi/=
      2. =git clone https://github.com/noncog/rofi-borg=
      3. configure =rofi-borg.sh= and launch using preferred method.
-        - See Usage for configuration and launching methods.
 ** Usage
 Before you can use the script, it must be configured and you need to setup a launching method.
 
@@ -51,7 +50,7 @@ Before you can use the script, it must be configured and you need to setup a lau
 
 The options you can change in each script are clearly marked in the comments.
 
-- *rofi-borg.sh*
+- *rofi-borg.sh*:
   - *global options* - Applies to all subscripts.
     - Minimally must set:
       1. directory=" " to your install location.
@@ -65,7 +64,7 @@ The options you can change in each script are clearly marked in the comments.
          - If using password/passkey. (RECCOMENDED)
          - Otherwise comment it out.
 
-- *sub-scripts*
+- *sub-scripts*:
   - Located in =rofi-borg/scripts/=
   - Contain *borg command options*.
     - Always located under borg-vars comment.
@@ -73,6 +72,7 @@ The options you can change in each script are clearly marked in the comments.
       - If you know the exact command options you want, set them in the corresponding script before using.
 
 *** Launching:
+You can launch rofi-borg however you like, there are no hard coded methods for doing so. Below are some possible methods.
 - *Locally*:
   - =cd= into install director
   - =./rofi-borg.sh= or =bash rofi-borg.sh=
