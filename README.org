@@ -45,7 +45,7 @@ Before you can use the script, it must be configured and you need to setup a lau
 
 #+HTML: <table><tr><th>:warning: WARNING</th></tr><tr><td>This script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</td><tr/></table>
 
-*** Configuration
+*** Configuration:
 =rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring =rofi-borg.sh= is the minimal amount of configuration required.
 
 The options you can change in each script are clearly marked in the comments.
@@ -71,7 +71,7 @@ The options you can change in each script are clearly marked in the comments.
     - rofi-borg ships with sane defaults.
     - If you know the exact command options you want, set them in the corresponding script before using.
 
-*** Launching
+*** Launching:
 You can launch rofi-borg however you like, there are no hard coded methods for doing so. Below are some possible methods.
 
 **** Locally
@@ -88,12 +88,12 @@ Just call the script from your window manager config.
 i3: =bindsym $mod+Shift+BackSpace exec --no-startup-id $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
 
 **** From Custom Rofi Menus
-I assume if you have a custom rofi menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method from above:
+I assume, if you have a custom rofi menu that you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method from above:
 - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
   - =NOTE= If you keep your menu scripts in rofi or better integrate rofi-borg into them, the file paths can be more easily managed. Just another reason to keep your rofi stuff together.
 
 **** From Rofi combi-mode
-Just add the scripts to combi-modi in your main rofi config: =$HOME/.config/rofi/config.rasi=
+Just add the script to combi-modi in your main rofi config: =$HOME/.config/rofi/config.rasi=
 
 Example:
 #+BEGIN_SRC
