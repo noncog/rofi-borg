@@ -74,8 +74,8 @@ The options you can change in each script are clearly marked in the comments.
 *** Launching:
 You can launch rofi-borg however you like, there are no hard coded methods for doing so. Below are some possible methods.
 - *Locally*:
-  1. =cd= into install director
-  2. =./rofi-borg.sh= or =bash rofi-borg.sh=
+  - =cd= into install director
+  - =./rofi-borg.sh= or =bash rofi-borg.sh=
 - *Globally*:
   - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
     - If installed elsewhere supply your own file path.
