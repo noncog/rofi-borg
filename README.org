@@ -90,8 +90,7 @@ You can launch rofi-borg however you like, there are no hard coded methods for d
   I assume if you have a rofi custom menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method from above:
 
   - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
-
-   =NOTE= If you keep your menu scripts in rofi or better integrate rofi-borg into them, the file paths can be more easily managed. Just another reason to keep your rofi stuff together.
+    - =NOTE= If you keep your menu scripts in rofi or better integrate rofi-borg into them, the file paths can be more easily managed. Just another reason to keep your rofi stuff together.
 
 - *From rofi combi-modi*:
   
