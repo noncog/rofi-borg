@@ -81,13 +81,15 @@ You can launch rofi-borg however you like, there are no hard coded methods for d
     - If installed elsewhere supply your own file path.
   - (optional) For easy access, add the script somewhere in your $PATH.
 - *From your window manager*:
+  
   Just call the script from your window manager config.
 
   i3:
-  #+BEGIN_SRC
+  #+BEGIN_QUOTE
   bindsym $mod+Shift+BackSpace exec --no-startup-id $HOME/.config/rofi/rofi-borg/rofi-borg.sh
-  #+END_SRC
+  #+END_QUOTE
 - *From your custom rofi menu*:
+  
   I assume if you have a rofi custom menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method above.
 
   Note: If you keep your menu scripts in rofi or better integrate rofi-borg into them, the file paths can be more easily managed. Just another reason to keep your rofi stuff together.
