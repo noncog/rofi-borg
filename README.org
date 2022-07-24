@@ -82,12 +82,9 @@ You can launch rofi-borg however you like, there are no hard coded methods for d
   - (optional) For easy access, add the script somewhere in your $PATH.
 - *From your window manager*:
   
-  Just call the script from your window manager config.
+  - Just call the script from your window manager config.
 
-  i3:
-  #+BEGIN_QUOTE
-  bindsym $mod+Shift+BackSpace exec --no-startup-id $HOME/.config/rofi/rofi-borg/rofi-borg.sh
-  #+END_QUOTE
+  i3: =bindsym $mod+Shift+BackSpace exec --no-startup-id $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
 - *From your custom rofi menu*:
   
   I assume if you have a rofi custom menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method above.
