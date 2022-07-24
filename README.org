@@ -74,8 +74,8 @@ The options you can change in each script are clearly marked in the comments.
 *** Launching:
 You can launch rofi-borg however you like, there are no hard coded methods for doing so. Below are some possible methods.
 - *Locally*:
-  - =cd= into install director
-  - =./rofi-borg.sh= or =bash rofi-borg.sh=
+  1. =cd= into install director
+  2. =./rofi-borg.sh= or =bash rofi-borg.sh=
 - *Globally*:
   - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
     - If installed elsewhere supply your own file path.
@@ -87,7 +87,7 @@ You can launch rofi-borg however you like, there are no hard coded methods for d
   i3: =bindsym $mod+Shift+BackSpace exec --no-startup-id $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
 - *From your custom rofi menu*:
   
-  I assume if you have a rofi custom menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method from above:
+  I assume if you have a custom rofi menu you know how to add to it and will not be covering that here. Instead, all you should need is to call the script using the global launch method from above:
 
   - =bash $HOME/.config/rofi/rofi-borg/rofi-borg.sh=
     - =NOTE= If you keep your menu scripts in rofi or better integrate rofi-borg into them, the file paths can be more easily managed. Just another reason to keep your rofi stuff together.
