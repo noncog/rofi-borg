@@ -3,6 +3,8 @@
 #+HTML: <p align="center"><code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to be easy to setup, highly capable, and customizable.</p>
 ** Motivation
 With my system, software, and configurations managed through GitHub ([[https://github.com/noncog/debian-autosetup][debian-autosetup]] and [[https://github.com/noncog/.dotfiles][.dotfiles]]), I required a method to backup and restore my private files. Thus, I created rofi-borg as a lean solution to have encrypted backups and a simple GUI to manage them.
+
+I knew that I wanted to share the script to allow others to have easy access to encrypted and deduplicated backups too. With that in mind, the script is designed to handle the boilerplate by automating the building of commands and menus for you. You simply set variables once and the script builds what it needs.
 ** Features
 *** Borg:
 - *Create and Prune* backups (archives) in a repository.
@@ -106,7 +108,9 @@ configuration {
  - =NOTE= I don't use this method and have not tested it. I use my own custom menu. Please report on this.
 
 ** Customizing & Extending
-- Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
+- Quick tips:
+  - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
+  - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
 
 - Theme:
   - TODO: The top level rofi config =theme.rasi= contains general theme settings and each rofi config file inherits from it. To change the theme, change this file. 
@@ -119,10 +123,11 @@ configuration {
 - Extending:
   - A good method for adding a script is to view the four provided, and model your script after them.
   - The main script passes required variables to the subscripts. Your script must function the same way.
-  - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result. 
+  - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
+  - The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
   
 ** Contributing
-See the customizing and extending section above. All script contributions must adhere to those guidelines.
+See the customizing and *extending* section above. All script contributions must adhere to those guidelines.
 
 Guide:
 1. Clone the repo and create a new branch:
@@ -133,6 +138,7 @@ Guide:
 Additionally, here is a list of things that I would like to add but don't have time:
 - Greater support for more command options of borg. If you use a certain borg command and I'm not supporting it, contribute it!
 - A better README. If you want to add information or change the formatting for clarity or usability please do so and I will check it out.
+- Feel free to do any of the tasks in the WIP section below and submit it!
 ** WIP
 TODO:
 - [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
@@ -150,5 +156,19 @@ TODO:
 - [ ] Upload the social preview.
 - [ ] Consider adding option to change borg passphrase from rofi-borg.
 - [ ] Consider adding a borg setup guide.
-- [ ] Consider adding alert support.
+- [ ] Consider adding alerts support.
+- [ ] Add tip: Do not run another command while previous is running, it will fail. Remote server is preoccupied. +1 for using notifications to prevent.
+- [ ] Add tip: Large downloads will take some time, do not worry. +1 for notifications.
+- [ ] Link relevant sections of borg.
+- [ ] Maybe Link or create a simple borg setup guide.
+- [ ] Consider adding no-click-to-exit to more/all sections to prevent users from accidentally closing.
+- [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
+- [ ] Add a check for logging must be >= 1, never 0. And add a comment to never put to 0.
+- [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
+- [ ] Consider adding an input for borg version, and allow compacting based on minimum borg number. I don't have compacting with 1.1.16-3 on Debian.
+- [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
+- [ ] Consider adding a short description of what borg is and why I choose to use it.
+- [ ] Consider creating a contributing guideline file.
+- [ ] Consider building in more abstraction for easier customization.
+- [ ] Consider abstracting the sub-script to a template and users can customize it easier.
 
