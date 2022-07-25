@@ -4,7 +4,7 @@
 ** Motivation
 With my system, software, and configurations managed through GitHub ([[https://github.com/noncog/debian-autosetup][debian-autosetup]] and [[https://github.com/noncog/.dotfiles][.dotfiles]]), I required a method to backup and restore my private files. Thus, I created rofi-borg as a lean solution to have encrypted backups and a simple GUI to manage them.
 
-I knew that I wanted to share the script to allow others to have easy access to encrypted and deduplicated backups too. With that in mind, the script is designed to handle the boilerplate by automating the building of commands and menus for you. You simply set variables once and the script builds what it needs.
+I wanted to allow others to have easy access to encrypted and deduplicated backups too. With that in mind, the script is designed to handle the boilerplate by automating the building of commands and menus for you. You simply set variables once and the script builds what it needs.
 ** Features
 *** Borg:
 - *Create and Prune* backups (archives) in a repository.
