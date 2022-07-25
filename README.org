@@ -161,7 +161,6 @@ TODO:
 - [ ] Add tip: Large downloads will take some time, do not worry. +1 for notifications.
 - [ ] Link relevant sections of borg.
 - [ ] Maybe Link or create a simple borg setup guide.
-- [ ] Consider adding no-click-to-exit to more/all sections to prevent users from accidentally closing.
 - [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
 - [ ] Add a check for logging must be >= 1, never 0. And add a comment to never put to 0.
 - [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
@@ -171,4 +170,8 @@ TODO:
 - [ ] Consider creating a contributing guideline file.
 - [ ] Consider building in more abstraction for easier customization.
 - [ ] Consider abstracting the sub-script to a template and users can customize it easier.
+- [ ] Consider adding a section on password management.
+- [ ] Consider adding badges or shields. - Downloads, License, Star Reminder
+- [ ] Add a tip or section about notifications: Highly reccomended! List reasons why.
+- [ ] Fix bug where if no selection do nothing or escape/click exit... instead of run first available command.
 
