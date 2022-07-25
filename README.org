@@ -122,6 +122,16 @@ configuration {
   - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result. 
   
 ** Contributing
+See the customizing and extending section above. All script contributions must adhere to those guidelines.
+
+Additionally, here is a list of things that I would like to add but don't have time:
+
+Guide:
+1. Clone the repo and create a new branch:
+   =git checkout https://github.com/noncog/rofi-borg -b name_for_new_branch=
+2. Make changes and test.
+3. Submit pull request with comprehensive description of changes.
+      
 ** WIP
 TODO:
 - [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
@@ -134,4 +144,7 @@ TODO:
 - [ ] Say font's in gif are Font Awesome 5.
 - [ ] Add Customization instructions.
 - [ ] Add Contribution instructions.
+- [ ] Add all of the options currently possible according to borg's online documentation to each sub-script.
+- [ ] Make a social preview for rofi-borg.
+- [ ] Upload the social preview.
 
