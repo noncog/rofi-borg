@@ -118,6 +118,7 @@ configuration {
     - I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
 
 - Extending:
+  
   A good method for adding a script is to view the four provided, and model your script after them.
   
   - The main script passes required variables to the subscripts. Your script must function the same way.
