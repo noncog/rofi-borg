@@ -116,11 +116,8 @@ configuration {
   - Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
   - If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
     - I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
-
 - Extending:
-  
-  A good method for adding a script is to view the four provided, and model your script after them.
-  
+  - A good method for adding a script is to view the four provided, and model your script after them.
   - The main script passes required variables to the subscripts. Your script must function the same way.
   - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result. 
   
