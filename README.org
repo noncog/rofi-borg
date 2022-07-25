@@ -67,7 +67,7 @@ The options you can change in each script are clearly marked in the comments.
 **** sub-scripts
 - Located in =rofi-borg/scripts/=
 - Contain *borg command options*.
-  - Always located under borg-vars comment.
+  - Always located under borg-vars comment in each script.
     - rofi-borg ships with sane defaults.
     - If you know the exact command options you want, set them in the corresponding script before using.
 
@@ -105,12 +105,31 @@ configuration {
 
  - =NOTE= I don't use this method and have not tested it. I use my own custom menu. Please report on this.
 
-** Customization
-Every script that creates a rofi window contains it's own prompt message string and can be configured per script.
+** Customizing & Extending
+- Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
+
+- Theme:
+  - TODO: The top level rofi config =theme.rasi= contains general theme settings and each rofi config file inherits from it. To change the theme, change this file. 
+  - The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
+  - The only caveat is that the rofi configuration file names must match their corresponding script file name.
+- Icons:
+  - Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
+  - If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
+    - I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
+
+- Extending:
+  A good method for adding a script is to view the four provided, and model your script after them.
+  
+  - The main script passes required variables to the subscripts. Your script must function the same way.
+  - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result. 
+  
 ** Contributing
 ** WIP
 TODO:
 - [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
+- [ ] Add date to file names to allow multiple downloads in the same directory.
+- [ ] Nest the dated downloads inside the rofi-borg-downloads directory.
+- [ ] Make sure mkdir downloads is not outputting error message to logs.
 - [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.
 - [ ] Recommend user to set font.
 - [ ] Recommend font based icon fonts for users.
