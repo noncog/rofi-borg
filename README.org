@@ -6,7 +6,7 @@ With my system, software, and configurations managed through GitHub ([[https://g
 
 I wanted to allow others to have easy access to encrypted and deduplicated backups too. With that in mind, the script is designed to handle the boilerplate by automating the building of commands and menus for you. You simply set variables once and the script builds what it needs.
 ** Features
-*** Borg:
+*** Borg
 - *Create and Prune* backups (archives) in a repository.
 - *List* archives in a repository.
 - *Download* an archive from a repository.
@@ -14,7 +14,8 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
 - Automatic password handling.
 - Able to use borg environment variables without setting them globally in =env=.
   - Protects you from having your borg information being backed up in your dotfiles.
-*** Script:
+    
+*** Scripts
 - Supports automation of backups.
   - Just call =backup_run.sh= from cron or systemd. May create template for this later.
 - Supports notifications!
@@ -31,6 +32,7 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
     - =NOTE= rofi/theme configs can be made to be inherited, may add later.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
+    
 ** Requirements
 - =rofi= and =borg=
 - some form of font based icons: default: Font Awesome 5
@@ -42,12 +44,13 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
      1. =cd $HOME/.config/rofi/=
      2. =git clone https://github.com/noncog/rofi-borg=
      3. configure =rofi-borg.sh= and launch using preferred method.
+        
 ** Usage
 Before you can use the script, it must be configured and you need to setup a launching method.
 
 #+HTML: <table><tr><th>:warning: WARNING</th></tr><tr><td>This script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</td><tr/></table>
 
-*** Configuration:
+*** Configuration
 =rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring =rofi-borg.sh= is the minimal amount of configuration required.
 
 The options you can change in each script are clearly marked in the comments.
@@ -73,7 +76,7 @@ The options you can change in each script are clearly marked in the comments.
     - rofi-borg ships with sane defaults.
     - If you know the exact command options you want, set them in the corresponding script before using.
 
-*** Launching:
+*** Launching
 You can launch rofi-borg however you like, there are no hard coded methods for doing so. Below are some possible methods.
 
 **** Locally
@@ -108,23 +111,22 @@ configuration {
  - =NOTE= I don't use this method and have not tested it. I use my own custom menu. Please report on this.
 
 ** Customizing & Extending
-- Quick tips:
-  - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
-  - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
-
-- Theme:
-  - TODO: The top level rofi config =theme.rasi= contains general theme settings and each rofi config file inherits from it. To change the theme, change this file. 
-  - The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
-  - The only caveat is that the rofi configuration file names must match their corresponding script file name.
-- Icons:
-  - Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
-  - If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
-    - I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
-- Extending:
-  - A good method for adding a script is to view the four provided, and model your script after them.
-  - The main script passes required variables to the subscripts. Your script must function the same way.
-  - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
-  - The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
+*** General
+- Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
+- To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
+*** Theme
+- TODO: The top level rofi config =theme.rasi= contains general theme settings and each rofi config file inherits from it. To change the theme, change this file.
+- The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
+- The only caveat is that the rofi configuration file names must match their corresponding script file name.
+*** Icons
+- Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
+- If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
+- I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
+*** Extending
+- A good method for adding a script is to view the four provided, and model your script after them.
+- The main script passes required variables to the subscripts. Your script must function the same way.
+- If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
+- The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
   
 ** Contributing
 See the customizing and *extending* section above. All script contributions must adhere to those guidelines.
@@ -139,6 +141,7 @@ Additionally, here is a list of things that I would like to add but don't have t
 - Greater support for more command options of borg. If you use a certain borg command and I'm not supporting it, contribute it!
 - A better README. If you want to add information or change the formatting for clarity or usability please do so and I will check it out.
 - Feel free to do any of the tasks in the WIP section below and submit it!
+  
 ** WIP
 TODO:
 - [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
