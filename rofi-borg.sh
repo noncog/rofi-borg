@@ -9,7 +9,7 @@ directory="$HOME/Projects/rofi-borg"      # directory of rofi-borg
 
 downloads="$HOME/Downloads/borg-download" # downloads directory
 prompt_message="Borg"                     # rofi prompt message left of entry field
-log_count=0                               # amount of logs want to keep
+log_count=7                               # amount of logs want to keep
 notifications="y"                         # set to n to disable 
 notifier="dunstify"                       # set to command for your notifications
 # caution - this command is evaluated. DO NOT put any dangerous commands in here
