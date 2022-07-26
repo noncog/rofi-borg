@@ -53,15 +53,27 @@ prune_logs() {
 
 # output progress
 notify "Backup: Listing!"
+
 # get list of backups
 borg list $list_options
+
 # output list to rofi
-chosen="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
-# output progress
-notify "Backup: Deleting!"
-# delete backup
-borg delete ::"$chosen"
-# output progress
-notify "Deleted: $chosen"
-# prune logs
-prune_logs
+selection="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
+
+# if selection was empty, do nothing
+if [[ -z "$selection" ]]; then
+    notify "Selection canceled."
+	
+# if selection not empty, run the command for the selection
+else
+    # output progress
+    notify "Backup: Deleting!"
+    # delete backup
+    borg delete ::"$chosen"
+    # output progress
+    notify "Deleted: $chosen"
+    # prune logs
+    prune_logs
+fi
+
+
