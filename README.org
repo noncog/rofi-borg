@@ -159,7 +159,7 @@ TODO:
 - [ ] Link relevant sections of borg.
 - [ ] Maybe Link or create a simple borg setup guide.
 - [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
-- [ ] Add a check for logging must be >= 1, never 0. And add a comment to never put to 0.
+- [X] Add a check for logging must be >= 1, never 0. And add a comment to never put to 0.
 - [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
 - [ ] Consider adding an input for borg version, and allow compacting based on minimum borg number. I don't have compacting with 1.1.16-3 on Debian.
 - [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
