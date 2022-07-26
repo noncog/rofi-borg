@@ -21,7 +21,7 @@ notifier=$3                                                    # command to use 
 logs=$4                                                        # log directory
 log_count=$5; log_count=$((log_count+1))                       # number of backup logs to keep
 downloads=$6                                                   # downloads directory
-
+this_download="download-$(date +"%Y-%m-%d_%T")"                # gives unique name to the download
 #===========#
 # borg-vars # CHANGE
 #===========#
@@ -56,8 +56,8 @@ prune_logs() {
 }
 
 # make and move into downloads
-mkdir -p $downloads
-cd "$downloads"
+mkdir -p "$downloads/$this_download"
+cd "$downloads/$this_download"
 
 # output progress
 notify "Backup: Listing!"
