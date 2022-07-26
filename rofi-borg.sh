@@ -79,6 +79,13 @@ push_menu() {
 	done
 }
 
+# function for notifications if enabled
+notify() {
+	if [ $notifications == "y" ]; then
+		eval $notifier $1
+	fi
+}
+
 # error message
 err_msg() {
 	$rofi_error_command -e "$1"
@@ -95,18 +102,25 @@ if [ $log_count -ge 1 ]; then
     # call rofi and return selection
     selection="$(push_menu | $rofi_command -p "$prompt_message" -dmenu)"
 
-    # get index of selected command
-    for i in "${!items[@]}"; do
-	if [[ "${items[$i]#*=}" = "$selection" ]]; then
-	    index=$i
-	fi
-    done
-
-    # execute command for selection
-    if [[ -f "${scripts[index]#*=}" ]]; then
-	bash "${scripts[index]#*=}" $directory $notifications $notifier $logs $log_count $downloads
+    # if selection was empty, if so do nothing
+    if [[ -z "$selection" ]]; then
+	notify "rofi-borg canceled."
+	
+    # if selection not empty, run the command for the selection
     else
-	err_msg "$selection script not found."
+	# get index of selected command
+	for i in "${!items[@]}"; do
+	    if [[ "${items[$i]#*=}" = "$selection" ]]; then
+		index=$i
+	    fi
+	done
+
+	# execute command for selection
+	if [[ -f "${scripts[index]#*=}" ]]; then
+	    bash "${scripts[index]#*=}" $directory $notifications $notifier $logs $log_count $downloads
+	else
+	    err_msg "$selection script not found."
+	fi
     fi
 
 # if logs set incorrectly: log_count < 1 error out   
