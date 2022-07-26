@@ -142,9 +142,8 @@ Additionally, here is a list of things that I would like to add but don't have t
 ** WIP
 TODO:
 - [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
-- [ ] Add date to file names to allow multiple downloads in the same directory.
-- [ ] Nest the dated downloads inside the rofi-borg-downloads directory.
-- [ ] Make sure mkdir downloads is not outputting error message to logs.
+- [ ] Add a note that users must set their file directories: downloads, etc.
+- [ ] Check if need to make it not download or delete a file if no selection, like main script.
 - [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.
 - [ ] Recommend user to set font.
 - [ ] Recommend font based icon fonts for users.
