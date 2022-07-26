@@ -95,7 +95,7 @@ backup() {
 
 	# output progress
 	notify "Backup: Finished!"
-    notify "Backup: Pruning!"
+	notify "Backup: Pruning!"
 	info "Pruning repository!"
 
 	# prune backups
