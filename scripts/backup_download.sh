@@ -61,16 +61,31 @@ cd "$downloads/$this_download"
 
 # output progress
 notify "Backup: Listing!"
+
 # get list of backups
 borg list $list_options
+
 # output list to fori
-chosen="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
-#output progress
-notify "Backup: Downloading!"
-# download selected
-borg extract ::"$chosen"
-# output progress
-notify "Backup: 'Download finished!'"
-notify "Downloaded: $chosen"
-# prune log files
-prune_logs
+selection="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
+
+# if selection was empty, do nothing
+if [[ -z "$selection" ]]; then
+    notify "Selection canceled."
+	
+# if selection not empty, run the command for the selection
+else
+    #output progress
+    notify "Backup: Downloading!"
+    # download selected
+    borg extract ::"$selection"
+    # output progress
+    notify "Backup: 'Download finished!'"
+    notify "Downloaded: $selection"
+    # prune log files
+    prune_logs
+fi
+    
+
+
+
+
