@@ -159,7 +159,6 @@ TODO:
 - [ ] Link relevant sections of borg.
 - [ ] Maybe Link or create a simple borg setup guide.
 - [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
-- [X] Add a check for logging must be >= 1, never 0. And add a comment to never put to 0.
 - [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
 - [ ] Consider adding an input for borg version, and allow compacting based on minimum borg number. I don't have compacting with 1.1.16-3 on Debian.
 - [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
@@ -170,8 +169,6 @@ TODO:
 - [ ] Consider adding a section on password management.
 - [ ] Consider adding badges or shields. - Downloads, License, Star Reminder
 - [ ] Add a tip or section about notifications: Highly reccomended! List reasons why.
-- [ ] Fix bug where if no selection do nothing or escape/click exit... instead of run first available command.
-  - Is related to always running backup_run then reporting it. Make some form of check for selection then do.
 - [ ] Give cron job and systemd examples for automating the backup script. Note that since deduplicating, it's easier to run many per day as only changed files are uploaded and my script "runs in the background."
 - [ ] See man rofi-theme for all theming related information.
 - [ ] Add a note that if you don't want the theme I provide at all, then just rewrite the config files to what you want, so long as you keep the same names.
