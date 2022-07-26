@@ -102,9 +102,9 @@ if [ $log_count -ge 1 ]; then
     # call rofi and return selection
     selection="$(push_menu | $rofi_command -p "$prompt_message" -dmenu)"
 
-    # if selection was empty, if so do nothing
+    # if selection was empty, do nothing
     if [[ -z "$selection" ]]; then
-	notify "rofi-borg canceled."
+	notify "Selection canceled."
 	
     # if selection not empty, run the command for the selection
     else
