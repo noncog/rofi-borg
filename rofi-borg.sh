@@ -127,12 +127,3 @@ if [ $log_count -ge 1 ]; then
 else
     err_msg "Log count too low: $log_count"
 fi
-
-
-
-
-
-
-
-
-

@@ -75,5 +75,3 @@ else
     # prune logs
     prune_logs
 fi
-
-

@@ -84,8 +84,3 @@ else
     # prune log files
     prune_logs
 fi
-    
-
-
-
-
