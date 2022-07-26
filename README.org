@@ -149,33 +149,48 @@ Additionally, here is a list of things that I would like to add but don't have t
   
 ** WIP
 TODO:
-- [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
-- [ ] Add to tips for contributing/extending that selection needs escaped. Best bet is to review the given scripts and completely model yours after the one that best fits.
-- [ ] Add a note that users must set their file directories: downloads, etc.
-- [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.
-- [ ] Recommend user to set font.
-- [ ] Recommend font based icon fonts for users.
-- [ ] Consider adding all of the options currently possible according to borg's online documentation to each sub-script.
-  - Decide if possible or if would pass literally to command...
+
+Tasks:
 - [ ] Make a social preview for rofi-borg.
 - [ ] Upload the social preview.
+- [ ] Give cron job and systemd examples for automating the backup script. Note that since deduplicating, it's easier to run many per day as only changed files are uploaded and my script "runs in the background."
+  
+Consider:
 - [ ] Consider adding option to change borg passphrase from rofi-borg.
 - [ ] Consider adding a borg setup guide.
 - [ ] Consider adding alerts support.
-
-- [ ] Link relevant sections of borg.
+- [ ] Consider adding all of the options currently possible according to borg's online documentation to each sub-script.
+  - Decide if possible or if would pass literally to command...
 - [ ] Maybe Link or create a simple borg setup guide.
 - [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
-- [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
 - [ ] Consider adding an input for borg version, and allow compacting based on minimum borg number. I don't have compacting with 1.1.16-3 on Debian.
-- [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
-- [ ] Consider adding a short description of what borg is and why I choose to use it.
-- [ ] Consider creating a contributing guideline file.
 - [ ] Consider building in more abstraction for easier customization.
 - [ ] Consider abstracting the sub-script to a template and users can customize it easier.
 - [ ] Consider adding a section on password management.
 - [ ] Consider adding badges or shields. - Downloads, License, Star Reminder
 
-- [ ] Give cron job and systemd examples for automating the backup script. Note that since deduplicating, it's easier to run many per day as only changed files are uploaded and my script "runs in the background."
-
+Notes/Instructions:
+- [ ] Add a note that users must set their file directories: downloads, etc.
+- [ ] Link relevant sections of borg.
+- [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
+- [ ] Consider adding a short description of what borg is and why I choose to use it.
+  
+Theming:
+- [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
+  Font:
+- [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.  
+- [ ] Recommend user to set font.
+- [ ] Recommend font based icon fonts for users.
+- [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
 - [ ] Add a note that if you don't want the theme I provide at all, then just rewrite the config files to what you want, so long as you keep the same names.
+
+
+Contributing:
+- [ ] Add to tips for contributing/extending that selection needs escaped. Best bet is to review the given scripts and completely model yours after the one that best fits.
+- [ ] Consider creating a contributing guideline file.
+
+  
+
+
+
+
