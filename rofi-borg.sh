@@ -9,7 +9,7 @@ directory="$HOME/Projects/rofi-borg"      # directory of rofi-borg
 
 downloads="$HOME/Downloads/borg-download" # downloads directory
 prompt_message="Borg"                     # rofi prompt message left of entry field
-log_count=7                               # amount of logs want to keep
+log_count=0                               # amount of logs want to keep
 notifications="y"                         # set to n to disable 
 notifier="dunstify"                       # set to command for your notifications
 # caution - this command is evaluated. DO NOT put any dangerous commands in here
@@ -82,24 +82,41 @@ err_msg() {
 	$rofi_error_command -e "$1"
 }
 
-# create logs directory
-if [ ! -d "${logs}" ]; then
+# if logs set correctly: log_count >= 1 proceed
+if [ $log_count -ge 1 ]; then
+    
+    # create logs directory
+    if [ ! -d "${logs}" ]; then
 	mkdir -p "${logs}"
-fi
+    fi
 
-# call rofi and return selection
-selection="$(push_menu | $rofi_command -p "$prompt_message" -dmenu)"
+    # call rofi and return selection
+    selection="$(push_menu | $rofi_command -p "$prompt_message" -dmenu)"
 
-# get index of selected command
-for i in "${!items[@]}"; do
-   if [[ "${items[$i]#*=}" = "$selection" ]]; then
-       index=$i
-   fi
-done
+    # get index of selected command
+    for i in "${!items[@]}"; do
+	if [[ "${items[$i]#*=}" = "$selection" ]]; then
+	    index=$i
+	fi
+    done
 
-# execute command for selection
-if [[ -f "${scripts[index]#*=}" ]]; then
+    # execute command for selection
+    if [[ -f "${scripts[index]#*=}" ]]; then
 	bash "${scripts[index]#*=}" $directory $notifications $notifier $logs $log_count $downloads
-else
+    else
 	err_msg "$selection script not found."
+    fi
+
+# if logs set incorrectly: log_count < 1 error out   
+else
+    err_msg "Log count too low: $log_count"
 fi
+
+
+
+
+
+
+
+
+
