@@ -29,7 +29,7 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
   - Each script has an associated rofi config, allowing each to be customized/themed independently.
-    - =NOTE= This means currently, you need to retheme all rofi configs to change it. Consider contributing a better theming setup.
+    - =NOTE= Currently means, you need to retheme all rofi configs to change it. Consider contributing a better theming setup.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
     
@@ -119,11 +119,11 @@ configuration {
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
 - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
 *** Theme
-- TODO: Create a better rofi config file structure/inheritance. Currently must change each rofi config to retheme.
-  - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
 - The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
 - The only caveat is that the rofi configuration file names must match their corresponding script file name.
 - See man rofi-theme for all theming related rofi information.
+- TODO: Create a better rofi config file structure/inheritance. Currently must change each rofi config to retheme.
+  - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
 *** Icons
 - Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
 - If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
