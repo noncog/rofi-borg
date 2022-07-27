@@ -29,7 +29,7 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
   - Each script has an associated rofi config, allowing each to be customized/themed independently.
-    - =NOTE= rofi/theme configs can be made to be inherited, may add later.
+    - =NOTE= This means currently, you need to retheme all rofi configs to change it. Consider contributing a better theming setup.
 - Extendable:
   - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
     
@@ -119,7 +119,8 @@ configuration {
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
 - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
 *** Theme
-- TODO: The top level rofi config =theme.rasi= contains general theme settings and each rofi config file inherits from it. To change the theme, change this file.
+- TODO: Create a better rofi config file structure/inheritance. Currently must change each rofi config to retheme.
+  - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
 - The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
 - The only caveat is that the rofi configuration file names must match their corresponding script file name.
 - See man rofi-theme for all theming related rofi information.
@@ -132,6 +133,7 @@ configuration {
 - The main script passes required variables to the subscripts. Your script must function the same way.
 - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
 - The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
+- The script *MUST* handle canceling a selection with a simple if-else to check if the selection is empty or not. See the scripts for examples.  Do not let your script run when an explicit selection is not made.
   
 ** Contributing
 See the customizing and *extending* section above. All script contributions must adhere to those guidelines.
@@ -171,7 +173,6 @@ Consider:
 
 Notes/Instructions:
 - [ ] Link relevant sections of borg.
-- [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
 - [ ] Consider adding a short description of what borg is and why I choose to use it.
   
 Font:
@@ -179,9 +180,8 @@ Font:
 - [ ] Recommend user to set font.
 - [ ] Recommend font based icon fonts for users.
 - [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
-- [ ] Add a note that if you don't want the theme I provide at all, then just rewrite the config files to what you want, so long as you keep the same names.
+
 Contributing:
-- [ ] Add to tips for contributing/extending that selection needs escaped. Best bet is to review the given scripts and completely model yours after the one that best fits.
 - [ ] Consider creating a contributing guideline file.
 
   
