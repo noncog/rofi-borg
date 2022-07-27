@@ -14,7 +14,7 @@
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
 
-    font: "Fira Code 12";
+    //font: "Fira Code 12";
 
     foreground: @drac-fgd;
     background-color: @drac-bgd;
