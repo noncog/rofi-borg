@@ -170,21 +170,16 @@ Consider:
 - [ ] Consider adding badges or shields. - Downloads, License, Star Reminder
 
 Notes/Instructions:
-- [ ] Add a note that users must set their file directories: downloads, etc.
 - [ ] Link relevant sections of borg.
 - [ ] Consider adding warning that I used rofi 1.5.4, not a rofi expert, not sure if all configs are backward compatible, etc. May need to make more universal rofi configs.
 - [ ] Consider adding a short description of what borg is and why I choose to use it.
   
-Theming:
-- [ ] Change rofi configs to be theme inheritance based so user can customize top level theme.
-  Font:
+Font:
 - [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.  
 - [ ] Recommend user to set font.
 - [ ] Recommend font based icon fonts for users.
 - [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
 - [ ] Add a note that if you don't want the theme I provide at all, then just rewrite the config files to what you want, so long as you keep the same names.
-
-
 Contributing:
 - [ ] Add to tips for contributing/extending that selection needs escaped. Best bet is to review the given scripts and completely model yours after the one that best fits.
 - [ ] Consider creating a contributing guideline file.
