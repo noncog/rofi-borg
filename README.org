@@ -118,11 +118,15 @@ configuration {
 *** General
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
 - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
+*** Font
+- The scripts' rofi configs inherit the font from your global rofi config.rasi.
+- If you would like to set the font per rofi config, uncomment the font line and change it to your desired font.
+  - =NOTE= Rofi config font/theme settings need abstracted. Please consider contributing.
 *** Theme
 - The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
 - The only caveat is that the rofi configuration file names must match their corresponding script file name.
 - See man rofi-theme for all theming related rofi information.
-- TODO: Create a better rofi config file structure/inheritance. Currently must change each rofi config to retheme.
+- TODO: Create a better rofi config file structure/inheritance/abstraction. Currently must change each rofi config to retheme.
   - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
 *** Icons
 - Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
@@ -176,12 +180,6 @@ Notes/Instructions:
 - [ ] Link relevant sections of borg.
 - [ ] Consider adding a short description of what borg is and why I choose to use it.
   
-Font:
-- [ ] Remove or comment out font settings. Figure out if font is inherited from main rofi config.  
-- [ ] Recommend user to set font.
-- [ ] Recommend font based icon fonts for users.
-- [ ] Consider setting a default font or requiring the user to set the font first. I think if don't set that it uses master rofi config.rasi font.
-
 Contributing:
 - [ ] Consider creating a contributing guideline file.
 
