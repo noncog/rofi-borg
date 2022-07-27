@@ -147,6 +147,7 @@ Guide:
 Additionally, here is a list of things that I would like to add but don't have time:
 - Greater support for more command options of borg. If you use a certain borg command and I'm not supporting it, contribute it!
 - A better README. If you want to add information or change the formatting for clarity or usability please do so and I will check it out.
+- Better theming. See theming in Customzizing & Extending.
 - Feel free to do any of the tasks in the WIP section below and submit it!
   
 ** WIP
