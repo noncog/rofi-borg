@@ -114,7 +114,7 @@ configuration {
 - Do not run another borg command while the previous is running. It will fail. The remote server is busy. This is a good reason to use notifications, to understand the scripts' state and avoiding collisions.
 - Large downloads will take some time. Do not worry. Another good reason to use notifications: downloads will announce when they're finished. Do not start a large download before you plan to do other actions.
 
-** Customizing & Extending
+** Customizing
 *** General
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
 - To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
@@ -132,7 +132,7 @@ configuration {
 - See man rofi-theme for all theming related rofi information.
 - TODO: Create a better rofi config file structure/inheritance/abstraction. Currently must change each rofi config to retheme.
   - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
-*** Extending
+** Extending
 - A good method for adding a script is to view the four provided, and model your script after them.
 - The main script passes required variables to the subscripts. Your script must function the same way.
 - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
@@ -140,7 +140,7 @@ configuration {
 - The script *MUST* handle canceling a selection with a simple if-else to check if the selection is empty or not. See the scripts for examples.  Do not let your script run when an explicit selection is not made.
   
 ** Contributing
-See the customizing and *extending* section above. All script contributions must adhere to those guidelines.
+See the customizing and *extending* sections above. All script contributions must adhere to those guidelines.
 
 Guide:
 1. Clone the repo and create a new branch:
