@@ -183,8 +183,7 @@ Notes/Instructions:
 Contributing:
 - [ ] Consider creating a contributing guideline file.
 
-  
+- [ ] Consider adding menu item/ability to add a script to the menu from the menu itself.
 
-
-
+- [ ] Self debate about number of mmenus. Can create a menu selection menu to disable and enable as well as add or subtract from them.
 

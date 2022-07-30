@@ -4,10 +4,10 @@
 # user-vars # CHANGE
 #===========#
 
-directory="$HOME/Projects/rofi-borg"      # directory of rofi-borg
+directory="$HOME/projects/rofi-borg"      # directory of rofi-borg
 # recommend $HOME/.config/rofi/rofi-borg
 
-downloads="$HOME/Downloads/borg-download" # downloads directory
+downloads="$HOME/downloads/borg-download" # downloads directory
 prompt_message="Borg"                     # rofi prompt message left of entry field
 log_count=7                               # amount of logs want to keep
 # never set log_count to 0, rofi-borg requires logging to function and not freeze your pc
@@ -67,28 +67,28 @@ scripts=(
 
 # create command to push/pipe menu into rofi
 push_menu() {
-	declare -A menu
-	declare -a order
-	# assemble menu items from items array
-	for item in "${items[@]}"; do
-		menu+=(["${item%=*}"]="${item#*=}")
-		order+=( "${item%=*}" )
-	done
-	for item in "${order[@]}"; do
-		echo "${menu["$item"]}"
-	done
+    declare -A menu
+    declare -a order
+    # assemble menu items from items array
+    for item in "${items[@]}"; do
+	menu+=(["${item%=*}"]="${item#*=}")
+	order+=( "${item%=*}" )
+    done
+    for item in "${order[@]}"; do
+	echo "${menu["$item"]}"
+    done
 }
 
 # function for notifications if enabled
 notify() {
-	if [ $notifications == "y" ]; then
-		eval $notifier $1
-	fi
+    if [ $notifications == "y" ]; then
+	eval $notifier $1
+    fi
 }
 
 # error message
 err_msg() {
-	$rofi_error_command -e "$1"
+    $rofi_error_command -e "$1"
 }
 
 # if logs set correctly: log_count >= 1 proceed

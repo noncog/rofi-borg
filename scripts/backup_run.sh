@@ -49,8 +49,7 @@ archive_name="::{hostname}-{now}"
 # borg may use the following placeholders: {now}, {utcnow}, {fqdn}, {hostname}, {user} and others
 
 backup_directories=(
-	$HOME/Documents
-	$HOME/Books
+    $HOME/documents
 )
 
 #============#
