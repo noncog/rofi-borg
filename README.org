@@ -118,7 +118,6 @@ configuration {
 ** Customizing
 *** General
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
-- To view more or less lines of output in the rofi windows change =lines:= in the appropriate config.
 *** Font
 - The scripts' rofi configs inherit the font from your global rofi config.rasi.
 - If you would like to set the font per rofi config, uncomment the font line and change it to your desired font.
@@ -130,7 +129,6 @@ configuration {
 *** Theme
 - The rofi configuration files are located in =configs=.
 - See man rofi-theme for all theming related rofi information.
-- TODO: Create a better rofi config file structure/inheritance/abstraction. Currently must change each rofi config to retheme.
   - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
 ** Extending
 - A good method for adding a script is to view the four provided, and model your script after them.
