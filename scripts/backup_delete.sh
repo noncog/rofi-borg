@@ -11,8 +11,8 @@ prompt_message="Delete" # rofi prompt message left of entry field
 #=============#
 
 directory=$1
-config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi configs for scripts
-rofi_command="rofi -theme $directory/configs/$config"          # configure main menu
+config=$7                                                      # get rofi configs for scripts
+rofi_command="rofi -no-fixed-num-lines -location 2 -yoffset 47 -theme $directory/configs/$config"          # configure main menu
 rofi_error_command="rofi -theme $directory/configs/error.rasi" # configure error message
 notifications=$2                                               # enable/disable notifications
 notifier=$3                                                    # command to use for notifications

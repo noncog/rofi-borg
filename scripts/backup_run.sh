@@ -14,7 +14,7 @@ directory=$1
 config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi configs for scripts
 # config file titles must match associated script title
 
-rofi_command="rofi -theme $directory/configs/$config"          # rofi config for menu
+rofi_command="rofi -location 2 -yoffset 47 -theme $directory/configs/$config"          # rofi config for menu
 rofi_error_command="rofi -theme $directory/configs/error.rasi" # rofi config for error message
 notifications=$2                                               # enable/disable notifications
 notifier=$3                                                    # command to use for notifications

@@ -128,8 +128,7 @@ configuration {
 - If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
 - I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
 *** Theme
-- The rofi configuration is entirely separate from the scripts. The scripts load their own rofi configurations.
-- The only caveat is that the rofi configuration file names must match their corresponding script file name.
+- The rofi configuration files are located in =configs=.
 - See man rofi-theme for all theming related rofi information.
 - TODO: Create a better rofi config file structure/inheritance/abstraction. Currently must change each rofi config to retheme.
   - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
