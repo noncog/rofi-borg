@@ -118,18 +118,17 @@ configuration {
 ** Customizing
 *** General
 - Every script that creates a rofi window contains it's own =prompt_message= string and can be configured per script. It is clearly marked under the variables you can change.
-*** Font
-- The scripts' rofi configs inherit the font from your global rofi config.rasi.
-- If you would like to set the font per rofi config, uncomment the font line and change it to your desired font.
-  - =NOTE= Rofi config font/theme settings need abstracted. Please consider contributing.
-*** Icons
-- Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
-- If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
-- I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
 *** Theme
 - The rofi configuration files are located in =configs=.
 - See man rofi-theme for all theming related rofi information.
   - =NOTE= Created with rofi 1.5.4. I'm no rofi expert, unsure if my theme setup is backward/forward compatible, etc. Please contribute.
+*** Font
+- By default the scripts' rofi configs inherit the font from your global rofi config.rasi.
+- If you would like to set the font, uncomment the font line in the associated config and change it to your desired font.
+*** Icons
+- Just use any font-based icons you want. Place the icon glyphs in the string for the menu item.
+- If you want it to "just work" then install [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
+- I would love it if someone contributed a version that uses real icons or buttons, but I also enjoy the simplicity of this version.
 ** Extending
 - A good method for adding a script is to view the four provided, and model your script after them.
 - The main script passes required variables to the subscripts. Your script must function the same way.
@@ -149,39 +148,6 @@ Guide:
 Additionally, here is a list of things that I would like to add but don't have time:
 - Greater support for more command options of borg. If you use a certain borg command and I'm not supporting it, contribute it!
 - A better README. If you want to add information or change the formatting for clarity or usability please do so and I will check it out.
-- Better theming. See theming in Customzizing & Extending.
-- Feel free to do any of the tasks in the WIP section below and submit it!
+- Greater abstraction of the subscript design to allow others more easily to contribute subscripts.
+
   
-** WIP
-TODO:
-
-Tasks:
-- [ ] Make a social preview for rofi-borg.
-- [ ] Upload the social preview.
-- [ ] Give cron job and systemd examples for automating the backup script. Note that since deduplicating, it's easier to run many per day as only changed files are uploaded and my script "runs in the background."
-  
-Consider:
-- [ ] Consider adding option to change borg passphrase from rofi-borg.
-- [ ] Consider adding a borg setup guide.
-- [ ] Consider adding alerts support.
-- [ ] Consider adding all of the options currently possible according to borg's online documentation to each sub-script.
-  - Decide if possible or if would pass literally to command...
-- [ ] Maybe Link or create a simple borg setup guide.
-- [ ] Consider adding a log viewer and deleter/manager if a user prematurely exits the output.
-- [ ] Consider adding an input for borg version, and allow compacting based on minimum borg number. I don't have compacting with 1.1.16-3 on Debian.
-- [ ] Consider building in more abstraction for easier customization.
-- [ ] Consider abstracting the sub-script to a template and users can customize it easier.
-- [ ] Consider adding a section on password management.
-- [ ] Consider adding badges or shields. - Downloads, License, Star Reminder
-
-Notes/Instructions:
-- [ ] Link relevant sections of borg.
-- [ ] Consider adding a short description of what borg is and why I choose to use it.
-  
-Contributing:
-- [ ] Consider creating a contributing guideline file.
-
-- [ ] Consider adding menu item/ability to add a script to the menu from the menu itself.
-
-- [ ] Self debate about number of mmenus. Can create a menu selection menu to disable and enable as well as add or subtract from them.
-
