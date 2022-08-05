@@ -36,12 +36,12 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
     
 ** Requirements
 - =rofi= and =borg=
-- some form of font based icons: default: Font Awesome 5
+- some form of font based icons: default: [[https://github.com/FortAwesome/Font-Awesome/releases/tag/5.15.4][Font Awesome 5]]
 
 ** Installation
 1. Install dependencies.
 2. *Reccomended Install*:
-   - This install method allows you to version control rofi-borg into your rofi dotfiles, so it is available to reinstall your backups as soon as your dotfiles are installed.
+   - This install method allows you to version control rofi-borg into your rofi dotfiles, so it's available to reinstall your backups as soon as your dotfiles are installed.
      1. =cd $HOME/.config/rofi/=
      2. =git clone https://github.com/noncog/rofi-borg=
      3. configure =rofi-borg.sh= and launch using preferred method.
