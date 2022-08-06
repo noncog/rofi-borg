@@ -68,7 +68,7 @@ scripts=(
 #===========#
 
 # create command to push/pipe menu into rofi
-push_menu() {
+assemble_menu() {
     declare -A menu
     declare -a order
     # assemble menu items from items array
@@ -102,7 +102,7 @@ if [ $log_count -ge 1 ]; then
     fi
 
     # call rofi and return selection
-    selection="$(push_menu | $rofi_command -p "$prompt_message" -dmenu)"
+    selection="$(assemble_menu | $rofi_command -p "$prompt_message" -dmenu)"
 
     # if selection was empty, do nothing
     if [[ -z "$selection" ]]; then
