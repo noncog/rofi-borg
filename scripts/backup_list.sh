@@ -27,7 +27,7 @@ log_count=$5; log_count=$((log_count+1))                       # number of backu
 
 # quote any options containing spaces
 list_options=(
-	'--format {archive}{NL}'
+    '--format {archive}{NL}'
 )
 
 #=============#
@@ -42,17 +42,17 @@ exec &>> $tempfile
 
 # function used for notifying if enabled
 notify() {
-	if [ $notifications == "y" ]; then
-		eval $notifier $1
-	fi
+    if [ $notifications == "y" ]; then
+	eval $notifier $1
+    fi    
 }
 
 # function to delete excess logs
 prune_logs() {
-	# if logs is >= log_count delete the oldest
-	if [ $(ls $logs | wc -l) -ge $log_count ]; then
-		(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
-	fi
+    # if logs is >= log_count delete the oldest
+    if [ $(ls $logs | wc -l) -ge $log_count ]; then
+	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
+    fi    
 }
 
 # output progress

@@ -50,17 +50,17 @@ export BORG_PASSCOMMAND="cat $HOME/.borg-passphrase"
 #============#
 
 items=(
-	backup=" Backup"
-	list=" List"
-	download=" Download"
-	delete=" Delete"
+    backup=" Backup"
+    list=" List"
+    download=" Download"
+    delete=" Delete"
 )
 
 scripts=(
-	backup="$scripts/backup_run.sh"
-	list="$scripts/backup_list.sh"
-	download="$scripts/backup_download.sh"
-	delete="$scripts/backup_delete.sh"
+    backup="$scripts/backup_run.sh"
+    list="$scripts/backup_list.sh"
+    download="$scripts/backup_download.sh"
+    delete="$scripts/backup_delete.sh"
 )
 
 #===========#

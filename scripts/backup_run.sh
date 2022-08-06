@@ -27,22 +27,22 @@ log_count=$5; log_count=$((log_count+1))                       # number of backu
 
 # quote any options containing spaces
 backup_options=(
-	--verbose
-	'--filter AME'
-	--list
-	--stats
-	--show-rc
-	--compression
-	lz4
+    --verbose
+    '--filter AME'
+    --list
+    --stats
+    --show-rc
+    --compression
+    lz4
 )
 
 prune_options=(
-	--list
-	--show-rc
-	--keep-daily 7
-	--keep-weekly 4
-	--keep-monthly 6
-	--keep-yearly 3
+    --list
+    --show-rc
+    --keep-daily 7
+    --keep-weekly 4
+    --keep-monthly 6
+    --keep-yearly 3
 )
 
 archive_name="::{hostname}-{now}"
@@ -64,66 +64,66 @@ exec &>> $tempfile
 
 # utility for printing info into logs
 info() {
-	printf "%s %s\n" "$*" "$( date )"
+    printf "%s %s\n" "$*" "$( date )"
 }
 
 # function for notifications if enabled
 notify() {
-	if [ $notifications == "y" ]; then
-		eval $notifier $1
-	fi
+    if [ $notifications == "y" ]; then
+	eval $notifier $1
+    fi    
 }
 
 # function to delete excess logs
 prune_logs() {
-	# if logs is >= log_count delete the oldest
-	if [ $(ls $logs | wc -l) -ge $log_count ]; then
-		(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
-	fi
+    # if logs is >= log_count delete the oldest
+    if [ $(ls $logs | wc -l) -ge $log_count ]; then
+	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
+    fi    
 }
 
 # main backup function
 backup() {
-	# output progress
-	notify "Backup: Starting!"
-	info "Starting backup!"
+    # output progress
+    notify "Backup: Starting!"
+    info "Starting backup!"
 
-	# create backup
-	borg create ${backup_options[@]} $archive_name ${backup_directories[@]}
-	backup_exit=$?
+    # create backup
+    borg create ${backup_options[@]} $archive_name ${backup_directories[@]}
+    backup_exit=$?
 
-	# output progress
-	notify "Backup: Finished!"
-	notify "Backup: Pruning!"
-	info "Pruning repository!"
+    # output progress
+    notify "Backup: Finished!"
+    notify "Backup: Pruning!"
+    info "Pruning repository!"
 
-	# prune backups
-	borg prune ${prune_options[@]} 
-	prune_exit=$?
+    # prune backups
+    borg prune ${prune_options[@]}
+    prune_exit=$?
 
-	# note - later versions of borg will need compact to be done here
+    # note - later versions of borg will need compact to be done here
+    
+    # use highest exit code as global exit code
+    global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
 
-	# use highest exit code as global exit code
-	global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
+    # check exit status and report it
+    if [ ${global_exit} -eq 0 ]; then
+	info "Backup and Prune finished successfully!"
+    elif [ ${global_exit} -eq 1 ]; then
+	info "Backup and/or Prune finished with warnings!"
+    else
+	info "Backup and/or Prune finished with errors!"
+    fi
 
-	# check exit status and report it
-	if [ ${global_exit} -eq 0 ]; then
-		info "Backup and Prune finished successfully!"
-	elif [ ${global_exit} -eq 1 ]; then
-		info "Backup and/or Prune finished with warnings!"
-	else
-		info "Backup and/or Prune finished with errors!"
-	fi
+    # show backup log
+    display="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
+    # note - one could use this to extend the function of selecting something from the log
 
-	# show backup log
-	display="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message -dmenu)"
-	# note - one could use this to extend the function of selecting something from the log
+    # prune log files
+    prune_logs
 
-	# prune log files
-	prune_logs
-
-	# exit sending status
-	exit ${global_exit}
+    # exit sending status
+    exit ${global_exit}
 }
 
 # run backup
