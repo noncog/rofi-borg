@@ -16,6 +16,21 @@ notifications="y"                         # set to n to disable
 notifier="dunstify"                       # set to command for your notifications
 # caution - this command is evaluated. DO NOT put any dangerous commands in here
 
+#===========#
+# borg-vars # CHANGE
+#===========#
+
+# feel free to customize this section with all of your borg environment variables.
+# these variables are passed to all subsequent scripts and are not set globally in your environment after execution
+
+export BORG_REPO="$(cat $HOME/.borg-repo)"
+
+export BORG_REMOTE_PATH="/usr/local/bin/borg1/borg1" 
+# rsync.net users must use BORG_REMOTE_PATH
+export BORG_PASSCOMMAND="cat $HOME/.borg-passphrase" 
+# my recommended way to pass borg your passphrase only during execution of this script and not globally setting in environment variables
+# just put your password in that file and it will just work.
+
 #=============#
 # script-vars #  DONT CHANGE
 #=============#
@@ -28,22 +43,6 @@ config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi config
 # to change location on screen, increase -yoffset 
 rofi_command="rofi -no-fixed-num-lines -location 2 -yoffset 57 -theme $directory/configs/$config"          # rofi config for menu
 rofi_error_command="rofi -theme $directory/configs/error.rasi" # rofi config for error message
-
-#===========#
-# borg-vars # CHANGE
-#===========#
-
-# feel free to customize this section with all of your borg requirements.
-
-# these variables are passed to all subsequent scripts and are not set globally in your environment after execution
-
-export BORG_REPO="$(cat $HOME/.borg-repo)"
-# use single quotes to prevent variable expansion if server contains special symbols: e.g. @ or $
-export BORG_REMOTE_PATH="/usr/local/bin/borg1/borg1"
-# rsync.net users must use BORG_REMOTE_PATH
-export BORG_PASSCOMMAND="cat $HOME/.borg-passphrase" 
-# my recommended way to pass borg your passphrase only during execution of this script and not globally setting in environment variables
-# just put your password in that file and it will just work.
 
 #============#
 # menu-items # CAN CUSTOMIZE
