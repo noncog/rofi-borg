@@ -22,7 +22,8 @@ notifier="dunstify"                       # set to command for your notification
 
 scripts="$directory/scripts"                                   # dfirectory for menu item scripts
 logs="$directory/logs"                                         # directory of logs & tmp files
-config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi config for script# config file titles must match associated script title
+config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi config for script
+# config file titles must match associated script title
 
 # to change location on screen, increase -yoffset 
 rofi_command="rofi -no-fixed-num-lines -location 2 -yoffset 57 -theme $directory/configs/$config"          # rofi config for menu
