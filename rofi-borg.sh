@@ -37,7 +37,7 @@ rofi_error_command="rofi -theme $directory/configs/error.rasi" # rofi config for
 
 # these variables are passed to all subsequent scripts and are not set globally in your environment after execution
 
-export BORG_REPO='example@example.org'
+export BORG_REPO="$(cat $HOME/.borg-repo)"
 # use single quotes to prevent variable expansion if server contains special symbols: e.g. @ or $
 export BORG_REMOTE_PATH="/usr/local/bin/borg1/borg1"
 # rsync.net users must use BORG_REMOTE_PATH
