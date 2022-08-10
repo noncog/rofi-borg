@@ -38,7 +38,7 @@ window {
     border-color: 					@bordercolor;
     border-radius: 					6;
     padding: 						5;
-    width: 							880;
+    width: 						810;
 }
 
 prompt {
