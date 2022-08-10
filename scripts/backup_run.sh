@@ -14,7 +14,7 @@ directory=$1
 config="${0##*/}"; config="${config%.*}.rasi"                  # get rofi configs for scripts
 # config file titles must match associated script title
 
-rofi_command="rofi -location 2 -yoffset 47 -theme $directory/configs/$config"          # rofi config for menu
+rofi_command="rofi -location 2 -yoffset 57 -theme $directory/configs/$config"          # rofi config for menu
 rofi_error_command="rofi -theme $directory/configs/error.rasi" # rofi config for error message
 notifications=$2                                               # enable/disable notifications
 notifier=$3                                                    # command to use for notifications
@@ -52,6 +52,13 @@ backup_directories=(
     $HOME/documents
 )
 
+# function to copy individual files to individuals directory for borg-backup.
+# it does not support backing individual files so we do that ourselves.
+# please create this directory if it does not exist or specify your own.
+get_individuals() {
+    cp "$HOME/files" "$HOME/.individuals/files"
+}
+
 #============#
 # backup_run #
 #============#
@@ -71,7 +78,7 @@ info() {
 notify() {
     if [ $notifications == "y" ]; then
 	eval $notifier $1
-    fi    
+    fi
 }
 
 # function to delete excess logs
@@ -79,7 +86,7 @@ prune_logs() {
     # if logs is >= log_count delete the oldest
     if [ $(ls $logs | wc -l) -ge $log_count ]; then
 	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
-    fi    
+    fi
 }
 
 # main backup function
@@ -88,6 +95,9 @@ backup() {
     notify "Backup: Starting!"
     info "Starting backup!"
 
+    # get the individual files
+    get_individuals
+    
     # create backup
     borg create ${backup_options[@]} $archive_name ${backup_directories[@]}
     backup_exit=$?
