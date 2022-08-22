@@ -29,10 +29,9 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
   - Configured from main script. Settings are passed to subsequent scripts.
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
-  - Each script has an associated rofi config, allowing each to be customized/themed independently.
-    - =NOTE= Currently means, you need to retheme all rofi configs to change it. Consider contributing a better theming setup.
+  - There is a main theme config, edit that to change the primary theming. Certain scripts have their own configs which inherit from the main config. This allows theming to be configured from the main file, or to change theme/size per script independently. See backup_run.sh and backup_run.rasi for an example.
 - Extendable:
-  - Just write a script and a rofi config file with matching names in their correct directories and add it to the =rofi-borg.sh= menu!
+  - Just write a script and point it to the main rofi config or inherit/write your own, then add it to the =rofi-borg.sh= menu items!
     
 ** Requirements
 - =rofi= and =borg=
@@ -69,6 +68,8 @@ The options you can change in each script are clearly marked in the comments.
     2. BORG_PASSPHRASE or BORG_PASSCOMMAND
        - If using password/passkey. (RECCOMENDED)
        - Otherwise comment it out.
+
+=NOTE= - These are setup to search for $HOME/.config/borg/repository and $HOME/.config/borg/passphrase by default. Just put your repository and passpharase in there and you're good to go!
 
 **** sub-scripts
 - Located in =rofi-borg/scripts/=
