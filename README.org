@@ -29,7 +29,7 @@ I wanted to allow others to have easy access to encrypted and deduplicated backu
   - Configured from main script. Settings are passed to subsequent scripts.
 - Customizable:
   - Default theme is [[https://draculatheme.com/rofi][Dracula]]!
-  - There is a main theme config, edit that to change the primary theming. Certain scripts have their own configs which inherit from the main config. This allows theming to be configured from the main file, or to change theme/size per script independently. See backup_run.sh and backup_run.rasi for an example.
+  - There is a main theme config, edit that to change the primary theming. Certain scripts have their own configs which inherit from the main config, =rofi-borg.rasi=. This allows theming to be configured from the main file, or to change theme/size per script, independently.
 - Extendable:
   - Just write a script and point it to the main rofi config or inherit/write your own, then add it to the =rofi-borg.sh= menu items!
     
