@@ -52,7 +52,7 @@ Before you can use the script, it must be configured and you need to setup a lau
 #+HTML: <table><tr><th>:warning: WARNING</th></tr><tr><td>This script is not designed to completely setup borg backup for you. You need to have an understanding of how borg is used and have a valid repository.</td><tr/></table>
 
 *** Configuration
-=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring =rofi-borg.sh=, =backup_run.sh= backup directories, and setting your repository and password in =$HOME/.borg-repo= and =$HOME/.borg-passphrase= is the minimal amount of configuration required. However, I recommend you checkout every script to make sure it's setup how you like.
+=rofi-borg= is designed to be easily configured from the top level script and the settings are passed into subsequent scripts. Configuring =rofi-borg.sh=, =backup_run.sh= backup directories, and setting your repository and password in the first line of =$HOME/.config/borg/repository= and =$HOME/.config/borg/passphrase= is the minimal amount of configuration required. However, I recommend you checkout every script to make sure it's setup how you like.
 
 The options you can change in each script are clearly marked in the comments.
 **** rofi-borg.sh

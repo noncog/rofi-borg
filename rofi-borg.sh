@@ -23,11 +23,11 @@ notifier="dunstify"                       # set to command for your notification
 # feel free to customize this section with all of your borg environment variables.
 # these variables are passed to all subsequent scripts and are not set globally in your environment after execution
 
-export BORG_REPO="$(cat $HOME/.borg-repo)"
+export BORG_REPO="$(cat $HOME/.config/borg/repository)"
 
 export BORG_REMOTE_PATH="/usr/local/bin/borg1/borg1" 
 # rsync.net users must use BORG_REMOTE_PATH
-export BORG_PASSCOMMAND="cat $HOME/.borg-passphrase" 
+export BORG_PASSCOMMAND="cat $HOME/.config/borg/passphrase"
 # my recommended way to pass borg your passphrase only during execution of this script and not globally setting in environment variables
 # just put your password in that file and it will just work.
 
