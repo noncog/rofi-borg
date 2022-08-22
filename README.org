@@ -136,8 +136,8 @@ configuration {
 - A good method for adding a script is to view the four provided, and model your script after them.
 - The main script passes required variables to the subscripts. Your script must function the same way.
 - If a script is to return output to rofi, it must use logging by sending the stderr/stdout to a log file to be presented to rofi. If this is not done, rofi will freeze your computer if rofi has to wait for the command to finish before displaying it's result.
-- The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
 - The script *MUST* handle canceling a selection with a simple if-else to check if the selection is empty or not. See the scripts for examples.  Do not let your script run when an explicit selection is not made.
+- The script *MUST* handle the building of commands and menus for the user. The user should only be required to set variables once, at the top of the script or top level script. Follow the commenting style and setting of variables, and building of commands and menus as I have. If you have a better method for doing all of this, please submit it!
   
 ** Contributing
 See the customizing and *extending* sections above. All script contributions must adhere to those guidelines.
@@ -150,7 +150,4 @@ Guide:
 
 Additionally, here is a list of things that I would like to add but don't have time:
 - Greater support for more command options of borg. If you use a certain borg command and I'm not supporting it, contribute it!
-- A better README. If you want to add information or change the formatting for clarity or usability please do so and I will check it out.
 - Greater abstraction of the subscript design to allow others more easily to contribute subscripts.
-
-  
