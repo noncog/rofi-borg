@@ -72,18 +72,18 @@ assemble_menu() {
     declare -a order
     # assemble menu items from items array
     for item in "${items[@]}"; do
-	menu+=(["${item%=*}"]="${item#*=}")
-	order+=( "${item%=*}" )
+        menu+=(["${item%=*}"]="${item#*=}")
+        order+=( "${item%=*}" )
     done
     for item in "${order[@]}"; do
-	echo "${menu["$item"]}"
+        echo "${menu["$item"]}"
     done
 }
 
 # function for notifications if enabled
 notify() {
     if [ $notifications == "y" ]; then
-	eval $notifier $1
+        eval $notifier $1
     fi
 }
 
@@ -96,7 +96,7 @@ err_msg() {
 if [ $log_count -ge 1 ]; then    
     # create logs directory
     if [ ! -d "${logs}" ]; then
-	mkdir -p "${logs}"
+        mkdir -p "${logs}"
     fi
 
     # call rofi and return selection
@@ -104,23 +104,23 @@ if [ $log_count -ge 1 ]; then
 
     # if selection was empty, do nothing
     if [[ -z "$selection" ]]; then
-	notify "Selection canceled."
-	
+        notify "Selection canceled."
+
     # if selection not empty, run the command for the selection
     else
-	# get index of selected command
-	for i in "${!items[@]}"; do
-	    if [[ "${items[$i]#*=}" = "$selection" ]]; then
-		index=$i
-	    fi
-	done
+        # get index of selected command
+        for i in "${!items[@]}"; do
+            if [[ "${items[$i]#*=}" = "$selection" ]]; then
+                index=$i
+            fi
+        done
 
-	# execute command for selection
-	if [[ -f "${scripts[index]#*=}" ]]; then
-	    bash "${scripts[index]#*=}" $directory $notifications $notifier $logs $log_count $downloads $config
-	else
-	    err_msg "$selection script not found."
-	fi
+        # execute command for selection
+        if [[ -f "${scripts[index]#*=}" ]]; then
+            bash "${scripts[index]#*=}" $directory $notifications $notifier $logs $log_count $downloads $config
+        else
+            err_msg "$selection script not found."
+        fi
     fi
 
 # if logs set incorrectly: log_count < 1 error out   
