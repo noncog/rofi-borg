@@ -23,7 +23,8 @@ notifier="dunstify"                       # set to command for your notification
 # feel free to customize this section with all of your borg environment variables.
 # these variables are passed to all subsequent scripts and are not set globally in your environment after execution
 
-export BORG_REPO="$(cat $HOME/.config/borg/repository)"
+BORG_REPO="$(cat $HOME/.config/borg/repository)"
+export BORG_REPO
 
 export BORG_REMOTE_PATH="/usr/local/bin/borg1/borg1" 
 # rsync.net users must use BORG_REMOTE_PATH
