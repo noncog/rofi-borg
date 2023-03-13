@@ -40,14 +40,14 @@ exec &>> $tempfile
 # function used for notifying if enabled
 notify() {
     if [ $notifications == "y" ]; then
-	eval $notifier $1
+    eval $notifier $1
     fi    
 }
 
 prune_logs() {
     # if logs is > than log_count delete the oldest
     if [ $(ls $logs | wc -l) -ge $log_count ]; then
-	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
+    (cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
     fi    
 }
 
@@ -63,7 +63,7 @@ selection="$(cat $tempfile | $rofi_command -no-click-to-exit -p $prompt_message 
 # if selection was empty, do nothing
 if [[ -z "$selection" ]]; then
     notify "Selection canceled."
-	
+
 # if selection not empty, run the command for the selection
 else
     # output progress

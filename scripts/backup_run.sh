@@ -77,7 +77,7 @@ info() {
 # function for notifications if enabled
 notify() {
     if [ $notifications == "y" ]; then
-	eval $notifier $1
+    eval $notifier $1
     fi
 }
 
@@ -85,7 +85,7 @@ notify() {
 prune_logs() {
     # if logs is >= log_count delete the oldest
     if [ $(ls $logs | wc -l) -ge $log_count ]; then
-	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
+    (cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
     fi
 }
 
@@ -118,11 +118,11 @@ backup() {
 
     # check exit status and report it
     if [ ${global_exit} -eq 0 ]; then
-	info "Backup and Prune finished successfully!"
+    info "Backup and Prune finished successfully!"
     elif [ ${global_exit} -eq 1 ]; then
-	info "Backup and/or Prune finished with warnings!"
+    info "Backup and/or Prune finished with warnings!"
     else
-	info "Backup and/or Prune finished with errors!"
+    info "Backup and/or Prune finished with errors!"
     fi
 
     # show backup log

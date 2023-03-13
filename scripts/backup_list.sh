@@ -43,7 +43,7 @@ exec &>> $tempfile
 # function used for notifying if enabled
 notify() {
     if [ $notifications == "y" ]; then
-	eval $notifier $1
+    eval $notifier $1
     fi    
 }
 
@@ -51,7 +51,7 @@ notify() {
 prune_logs() {
     # if logs is >= log_count delete the oldest
     if [ $(ls $logs | wc -l) -ge $log_count ]; then
-	(cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
+    (cd $logs && ls -tp | grep -v '/$' | tail -n +$log_count | xargs -I {} rm -- {})
     fi    
 }
 
