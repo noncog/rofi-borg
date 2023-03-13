@@ -1,5 +1,5 @@
 #+HTML: <h1 align="center">rofi-borg</h1>
-#+HTML: <p align="center"><a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/Made_with-Emacs-blueviolet.svg?style=flat-square&logo=GNU%20Emacs&logoColor=white" /></a> <a href="https://github.com/noncog/.dotfiles/blob/master/LICENSE"><img src="https://img.shields.io/github/license/noncog/rofi-borg?color=blue&style=flat-square" /></a></p>
+#+HTML: <p align="center"><a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/Made_with-Emacs-blueviolet.svg?style=flat-square&logo=GNU%20Emacs&logoColor=white" /></a> <a href="https://github.com/noncog/rofi-borg/blob/master/LICENSE"><img src="https://img.shields.io/github/license/noncog/rofi-borg?color=blue&style=flat-square" /></a></p>
 #+HTML: <p align="center"><img src="demo.gif"/></p>
 #+HTML: <p align="center"><code>rofi-borg</code> is a GUI wrapper script for <a href="https://www.borgbackup.org/">borg backup</a>. It aims to be easy to setup, highly capable, and customizable.</p>
 ** Motivation
